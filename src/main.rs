@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
 use serde_repr::{Deserialize_repr, Serialize_repr};
 
 #[derive(Debug, Clone, Default, Deserialize, Serialize)]
-pub struct Details {
+struct Details {
     pub title: String,
     pub author: String,
     pub artist: String,
@@ -16,7 +16,7 @@ pub struct Details {
 
 #[derive(Debug, Default, Clone, Copy, Serialize_repr, Deserialize_repr)]
 #[repr(i8)]
-pub enum Status {
+enum Status {
     #[default]
     Unknown = 0,
     Ongoing = 1,
