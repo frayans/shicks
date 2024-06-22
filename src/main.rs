@@ -149,7 +149,8 @@ fn main() -> std::io::Result<()> {
 
     let mut stdout = std::io::stdout();
 
-    if let Ok(true) = Confirm::new("Write to file? [./details.json]")
+    if let Ok(true) = Confirm::new("Write to file?")
+        .with_help_message("will be written at ./details.json")
         .with_default(false)
         .prompt()
     {
