@@ -90,8 +90,6 @@ enum Status {
     Unknown = 0,
     Ongoing = 1,
     Completed = 2,
-    Licensed = 3,
-    Finished = 4,
     Cancelled = 5,
     Hiatus = 6,
 }
@@ -101,8 +99,6 @@ impl Status {
         Self::Unknown,
         Self::Ongoing,
         Self::Completed,
-        Self::Licensed,
-        Self::Finished,
         Self::Cancelled,
         Self::Hiatus,
     ];
